@@ -74,7 +74,7 @@ class MainCarouselWidgetState extends State<MainCarouselStatefulWidget> {
                 width: 1000,
                 color: mainColor.withOpacity(0.7),
                 child: Padding(
-                  padding: EdgeInsets.all(16),
+                  padding: EdgeInsets.all(14),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -86,8 +86,8 @@ class MainCarouselWidgetState extends State<MainCarouselStatefulWidget> {
                         children: imgList.map((url) {
                           int index = imgList.indexOf(url);
                           return Container(
-                            width: 5.0,
-                            height: 5.0,
+                            width: 4.0,
+                            height: 4.0,
                             margin: EdgeInsets.symmetric(horizontal: 2.0),
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,

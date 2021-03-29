@@ -3,4 +3,4 @@ import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 final double columnItemHeight = 0.15;
-final double columnItemPaddingTop = 0.04;
+final double columnItemPaddingTop = 0.02;

@@ -5,6 +5,7 @@ import 'package:lab_4/util/percentage_sizes.dart';
 import 'package:lab_4/values/colors.dart';
 import 'package:lab_4/values/dimens.dart';
 import 'package:lab_4/values/styles.dart';
+import 'package:lab_4/widgets/details_page/DetailsPage.dart';
 import 'BottomCarouselWidget.dart';
 import 'MainCarouselWidget.dart';
 
@@ -15,10 +16,7 @@ class MainPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: _title,
-      home: MyStatefulWidget(),
-    );
+    return MyStatefulWidget();
   }
 }
 
@@ -91,8 +89,15 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                             style: mainTextStyle(Colors.black, FontWeight.w500),
                           ),
                           TextButton.icon(
-                            onPressed: () { },
-                            label:Icon(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) {
+                                  return DetailsPage();
+                                }),
+                              );
+                            },
+                            label: Icon(
                               Icons.chevron_right,
                               color: mainColor,
                             ),

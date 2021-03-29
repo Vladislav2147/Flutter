@@ -5,18 +5,19 @@ import 'package:lab_4/util/percentage_sizes.dart';
 import 'package:lab_4/values/dimens.dart';
 import 'package:lab_4/values/styles.dart';
 
-String backgroundImage = 'https://www.whistles.com/dw/image/v2/BDCH_PRD/on/demandware.static/-/Sites-whistles-master-catalog/default/dwd305d41f/images/00103024627/whistles-alexandra-belted-coat-dark-green-03.jpg?sw=1429&sh=2000&strip=false';
+String defaultImage = 'https://www.whistles.com/dw/image/v2/BDCH_PRD/on/demandware.static/-/Sites-whistles-master-catalog/default/dwd305d41f/images/00103024627/whistles-alexandra-belted-coat-dark-green-03.jpg?sw=1429&sh=2000&strip=false';
+String backgroundImage = '';
 
 /// This is the main application widget.
 class DetailsPage extends StatelessWidget {
   static const String _title = 'Flutter Code Sample';
 
+  DetailsPage([String? url]) {
+    backgroundImage = url ?? defaultImage;
+  }
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: _title,
-      home: MyStatefulWidget(),
-    );
+    return MyStatefulWidget();
   }
 }
 
@@ -57,7 +58,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 Icons.chevron_left,
                 color: Colors.white,
               ),
-              onPressed: () {  },
+              onPressed: () {
+                Navigator.pop(context);
+              },
             ),
           ),
         ),

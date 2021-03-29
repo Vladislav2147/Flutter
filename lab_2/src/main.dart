@@ -11,6 +11,10 @@ void main() async {
   print("--------------------------");
 
   //Task 2
+
+  var newVacancy = ProgSysAdminVacancy("vacancyName", 20000, []);
+  print(vacancy.compareTo(newVacancy) == 0);
+
   ProgVacancyIterable iterable = ProgVacancyIterable([
     vacancy,
     ProgSysAdminVacancy("name", 1000, null),
@@ -20,6 +24,7 @@ void main() async {
   for(var vacancy in iterable) {
     print(vacancy.getInfo());
   }
+  print(iterable.elementAt(2).getInfo());
   print("--------------------------");
 
   //Task 3
@@ -84,8 +89,6 @@ void main() async {
   });
 
   controller.sink.addStream(countStream(10));
-
-
 
 }
 
