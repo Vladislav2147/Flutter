@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lab_4/util/percentage_sizes.dart';
-import 'package:lab_4/values/colors.dart';
-import 'package:lab_4/values/dimens.dart';
-import 'package:lab_4/values/styles.dart';
-import 'package:lab_4/widgets/details_page/DetailsPage.dart';
-
 
 /// This is the main application widget.
 class PlatformPage extends StatelessWidget {
@@ -34,7 +28,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   Future<void> _getBatteryLevel() async {
     String batteryLevel;
     try {
-      final int result = await platform.invokeMethod('getBatteryLevel', {"default_level": -10});
+      final int result = await platform.invokeMethod('getBatteryLevel', {"default_level": -109});
       batteryLevel = '$result%';
     } on PlatformException catch (e) {
       batteryLevel = "Failed to get battery level: '${e.message}'.";
