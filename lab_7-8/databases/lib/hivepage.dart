@@ -14,7 +14,7 @@ class _HivePageState extends State<HivePage> {
   HiveOrm hiveOrm;
 
   @override
-  void initState() {
+  void initState()  {
     super.initState();
     hiveOrm = HiveOrm();
     hiveOrm.init();

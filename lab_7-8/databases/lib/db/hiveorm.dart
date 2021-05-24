@@ -14,6 +14,7 @@ class HiveOrm implements SimpleDataSource {
     Hive.init(dir.path);
     Hive.registerAdapter(VacancyAdapter());
     Hive.openBox<Vacancy>('vacanciesHive');
+    Hive.openBox<Vacancy>('vacanciesHive');
   }
 
   @override
